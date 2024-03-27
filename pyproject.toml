@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "cv-generator"
+version = "2024"
+description = ""
+authors = ["Damien Allen <dev@dallen.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
