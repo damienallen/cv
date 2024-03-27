@@ -1,0 +1,89 @@
+bio:
+  name: Damien Allen
+  location: Rotterdam, NL
+  nationality: NL & US
+
+contact:
+  email: contact@dallen.co
+  phone: +31 6 29090983
+
+education:
+  - institution: University of Colorado at Boulder
+    degree: BSc. Environmental Engineering
+    years: 2008 - 2012
+  - institution: Delft University of Technology
+    degree: MSc. Civil Engineering
+    years: 2012 - 2015
+
+work:
+  - company: Aurea Imaging
+    title: Software Developer
+    years: 2023 - Present
+    description: >
+      Developing spatial analyses for precision agriculture, 
+      empowering fruit growers and breeders.
+      Building user-friendly tooling and efficient deployment solutions.
+
+  - company: MX3D
+    title: Lead Software Developer
+    years: 2019 - 2022
+    description: >
+      Was responsible for translating an R&D 3D metal printing process
+      into a usable, end-to-end software product. My role included 
+      systems architecture, establishing design principles,
+      building deployment pipelines, and hiring/mentoring new teammembers.
+
+  - company: Mobile Water Management
+    title: Software & Product Developer
+    years: 2016 - 2019
+    description: >
+      Developed a mobile app in close coordination with the 
+      Dutch water authorities for measuring surface and
+      groundwater levels.
+
+  - company: University of Colorado at Boulder
+    title: Computer Lab Systems Admin
+    years: 2009 - 2012
+    description: Cross-platform management and deployment of computer labs.
+
+  - company: Stichting Voedseltuin
+    title: Volunteer Gardener
+    years: 2018 - Present
+    description: Growing fresh produce to supplement food bank packets.
+
+skills:
+  - label: Backend
+    items:
+      - Python
+      - Django
+      - FastAPI
+      - PostgreSQL
+      - MongoDB
+      - Redis
+  - label: Cloud
+    items:
+      - Docker
+      - Ansible
+      - Jenkins
+      - Github Actions
+      - Gitlab CI
+  - label: Frontend
+    items:
+      - React
+      - Typescript
+      - UI / UX
+      - Three.js
+      - Ionic
+      - Qt
+  - label: CAD & GIS
+    items:
+      - QGIS
+      - Rhino
+      - Grasshopper
+      - OpenSCAD
+
+language:
+  - name: English
+    level: native
+  - name: Dutch
+    level: intermediate
