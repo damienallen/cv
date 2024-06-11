@@ -47,6 +47,6 @@ class CVContents(BaseModel):
     skills: list[SkillListItem]
 
 
-def load_contents(contents_yaml_path: Path) -> CVContents:
+def load_cv(contents_yaml_path: Path) -> CVContents:
     with open(contents_yaml_path) as f:
         return CVContents.model_validate(yaml.safe_load(f))

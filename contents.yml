@@ -3,6 +3,10 @@ bio:
   location: Rotterdam, NL
   nationality: NL / US
 
+github:
+  url: https://github.com/damienallen
+  username: damienallen
+
 contact:
   email: work@dallen.co
   phone: +31 6 29090983
@@ -22,7 +26,7 @@ work:
     description: >
       Developing spatial analyses for precision agriculture, 
       empowering fruit growers and breeders.
-      Building user-friendly tooling and efficient deployment solutions.
+      Building user-friendly interfaces and efficient deployment solutions.
 
   - company: MX3D
     title: Lead Software Developer
