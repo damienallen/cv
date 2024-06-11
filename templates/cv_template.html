@@ -14,7 +14,7 @@
 
     <!-- Fonts & icons -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Open+Sans" rel="stylesheet">
-    <link href="cv.css" rel="stylesheet">
+    <link href="assets/cv.css" rel="stylesheet">
 
     <!-- Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,25 +37,57 @@
     <div class="page">
         <header>
             <section id="bio">
-                <img src="" alt="Portrait photo" />
+                <img src="assets/portrait.png" alt="Portrait photo" />
+                <a href="{{ bio.github.url }}">{{ bio.github.username }}</a>
+                <div>{{ bio.contact.email }}</div>
+                <div>{{ bio.contact.phone }}</div>
+                <div>{{ bio.location }}</div>
             </section>
             <section id="education">
                 <h2>Education</h2>
+                {% for item in education %}
+                <div>
+                    <div>{{ item.years}}</div>
+                    <div>{{ item.institution}}</div>
+                    <div>{{ item.degree}}</div>
+                </div>
+                {% endfor %}
             </section>
             <section id="language">
                 <h2>Language</h2>
+                {% for item in language %}
+                <div>{{ item.name}} ({{ item.level }})</div>
+                {% endfor %}
             </section>
         </header>
 
         <main>
             <section id="name">
-                <h1>Damien Allen</h1>
+                <h1>{{ bio.name }}</h1>
             </section>
             <section id="work">
-
+                {% for item in work %}
+                <div>
+                    <div>{{ item.company}}</div>
+                    <div>
+                        <div>{{ item.title}}</div>
+                        <div>{{ item.years}}</div>
+                    </div>
+                    <div>{{ item.description}}</div>
+                </div>
+                {% endfor %}
             </section>
             <section id="skills">
-
+                {% for category in skills %}
+                <div>
+                    <h3>{{ category.label }}</h3>
+                    <ul>
+                        {% for skill in category.items %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
             </section>
         </main>
 

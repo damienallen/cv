@@ -3,13 +3,14 @@ bio:
   location: Rotterdam, NL
   nationality: NL / US
 
-github:
-  url: https://github.com/damienallen
-  username: damienallen
+  contact:
+    email: work@dallen.co
+    phone: +31 6 29090983
 
-contact:
-  email: work@dallen.co
-  phone: +31 6 29090983
+  github:
+    url: https://github.com/damienallen
+    username: damienallen
+
 
 education:
   - institution: University of Colorado at Boulder

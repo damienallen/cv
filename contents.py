@@ -1,18 +1,25 @@
 from pathlib import Path
 
 import yaml
-from pydantic import BaseModel
+from pydantic import BaseModel, AnyUrl
+
+
+class Github(BaseModel):
+    username: str
+    url: AnyUrl
+
+
+class Contact(BaseModel):
+    email: str
+    phone: str
 
 
 class BioSection(BaseModel):
     name: str
     location: str
     nationality: str
-
-
-class ContactSection(BaseModel):
-    email: str
-    phone: str
+    contact: Contact
+    github: Github
 
 
 class LanguageItem(BaseModel):
@@ -40,7 +47,6 @@ class SkillListItem(BaseModel):
 
 class CVContents(BaseModel):
     bio: BioSection
-    contact: ContactSection
     language: list[LanguageItem]
     education: list[EducationItem]
     work: list[WorkItem]
