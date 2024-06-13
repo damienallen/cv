@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FAFAFA;
-    font: 12pt "Tahoma";
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 
 * {
@@ -50,15 +51,56 @@ body {
 }
 
 header {
+    padding: 20px;
     background: black;
     color: white;
-    flex: 0 0 40%;
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 main {
     flex: 1;
 }
 
-h1 {
+h1,
+h2 {
     text-transform: uppercase;
+}
+
+#bio div {
+    margin: 5px 0;
+}
+
+.portrait {
+    margin: 20px;
+}
+
+.portrait img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.github img {
+    height: 12px;
+}
+
+#skills {
+    display: flex;
+}
+
+#skills div {
+    flex: 1;
+}
+
+#skills div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

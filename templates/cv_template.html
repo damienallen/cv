@@ -14,7 +14,7 @@
 
     <!-- Fonts & icons -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Open+Sans" rel="stylesheet">
-    <link href="assets/cv.css" rel="stylesheet">
+    <link href="../templates/assets/cv.css" rel="stylesheet">
 
     <!-- Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,8 +37,13 @@
     <div class="page">
         <header>
             <section id="bio">
-                <img src="assets/portrait.png" alt="Portrait photo" />
-                <a href="{{ bio.github.url }}">{{ bio.github.username }}</a>
+                <div class="portrait">
+                    <img src="assets/portrait.png" alt="Portrait photo" />
+                </div>
+                <a href="{{ bio.github.url }}">
+                    <img src="assets/github.svg" alt="Github profile" />
+                    {{ bio.github.username }}
+                </a>
                 <div>{{ bio.contact.email }}</div>
                 <div>{{ bio.contact.phone }}</div>
                 <div>{{ bio.location }}</div>
