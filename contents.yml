@@ -79,6 +79,7 @@ skills:
       - Rhino
       - Grasshopper
       - OpenSCAD
+      - Shapely
       - GeoPandas
 
 language:

@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' fonts.googleapis.com">
 
     <!-- Fonts & icons -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300|pen+Sans:300,400,600" rel="stylesheet">
     <link href="../templates/assets/cv.css" rel="stylesheet">
 
     <!-- Stylesheets -->
@@ -40,10 +40,12 @@
                 <div class="portrait">
                     <img src="assets/portrait.png" alt="Portrait photo" />
                 </div>
-                <a href="{{ bio.github.url }}">
-                    <img src="assets/github.svg" alt="Github profile" />
-                    {{ bio.github.username }}
-                </a>
+                <div class="github">
+                    <a href="{{ bio.github.url }}">
+                        <img src="assets/github.svg" alt="Github profile" />
+                        {{ bio.github.username }}
+                    </a>
+                </div>
                 <div>{{ bio.contact.email }}</div>
                 <div>{{ bio.contact.phone }}</div>
                 <div>{{ bio.location }}</div>
@@ -51,8 +53,8 @@
             <section id="education">
                 <h2>Education</h2>
                 {% for item in education %}
-                <div>
-                    <div>{{ item.years}}</div>
+                <div class="section-items">
+                    <h5>{{ item.years}}</h5>
                     <div>{{ item.institution}}</div>
                     <div>{{ item.degree}}</div>
                 </div>
@@ -60,9 +62,11 @@
             </section>
             <section id="language">
                 <h2>Language</h2>
-                {% for item in language %}
-                <div>{{ item.name}} ({{ item.level }})</div>
-                {% endfor %}
+                <div class="section-items">
+                    {% for item in language %}
+                    <div>{{ item.name}} ({{ item.level }})</div>
+                    {% endfor %}
+                </div>
             </section>
         </header>
 
@@ -72,19 +76,19 @@
             </section>
             <section id="work">
                 {% for item in work %}
-                <div>
-                    <div>{{ item.company}}</div>
+                <div class="section-items">
+                    <span>{{ item.company}}</span>
                     <div>
-                        <div>{{ item.title}}</div>
-                        <div>{{ item.years}}</div>
+                        <h4>{{ item.title}}</h4>
+                        <h5>{{ item.years}}</h5>
                     </div>
-                    <div>{{ item.description}}</div>
+                    <p>{{ item.description}}</p>
                 </div>
                 {% endfor %}
             </section>
             <section id="skills">
                 {% for category in skills %}
-                <div>
+                <div class="section-items">
                     <h3>{{ category.label }}</h3>
                     <ul>
                         {% for skill in category.items %}
