@@ -14,19 +14,7 @@
 
     <!-- Fonts & icons -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300|pen+Sans:300,400,600" rel="stylesheet">
-    <link href="../templates/assets/cv.css" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
-    <link rel="manifest" href="./icons/site.webmanifest">
-    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#f76767">
-    <link rel="shortcut icon" href="./icons/favicon.ico">
-    <meta name="theme-color" content="#2e3439">
+    <link href="assets/cv.css" rel="stylesheet">
 
     <script defer data-domain="dallen.co" src="https://tele.dallen.dev/js/script.js"></script>
 
@@ -40,15 +28,22 @@
                 <div class="portrait">
                     <img src="assets/portrait.png" alt="Portrait photo" />
                 </div>
-                <div class="github">
+                <p class="social">
                     <a href="{{ bio.github.url }}">
-                        <img src="assets/github.svg" alt="Github profile" />
-                        {{ bio.github.username }}
+                        <img src="assets/github.svg" alt="Github profile: {{ bio.github.username }}" />
                     </a>
-                </div>
-                <div>{{ bio.contact.email }}</div>
-                <div>{{ bio.contact.phone }}</div>
-                <div>{{ bio.location }}</div>
+                    <a href="{{ bio.linkedin.url }}">
+                        <img src="assets/linkedin.svg" alt="LinkedIn profile: {{ bio.linkedin.username }}" />
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:{{ bio.contact.email }}">
+                        {{ bio.contact.email }}
+                    </a>
+                </p>
+                <p>{{ bio.contact.phone }}</p>
+                <p>{{ bio.location }}</p>
+                <p>Nationalities: {{ bio.nationality }}</p>
             </section>
             <section id="education">
                 <h2>Education</h2>

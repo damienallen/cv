@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #FAFAFA;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 * {
@@ -22,6 +22,7 @@ body {
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
+    align-items: stretch;
 }
 
 @page {
@@ -47,14 +48,18 @@ body {
         background: initial;
         page-break-after: always;
     }
+
+    header {
+        height: 100%;
+    }
 }
 
 header {
     background: black;
     color: white;
-    flex: 1;
-    max-width: 35%;
+    flex: 2;
     text-align: center;
+    font-size: 1.1em;
 }
 
 header a {
@@ -64,13 +69,7 @@ header a {
 }
 
 header section {
-    margin-bottom: 100px;
-}
-
-section p {
-    font-family: 'Merriweather', Times, serif;
-    line-height: 1.4em;
-    font-size: 0.8em;
+    margin-bottom: 80px;
 }
 
 .section-items {
@@ -82,10 +81,14 @@ section p {
 }
 
 main {
-    padding: 40px;
-    flex: 1;
+    padding: 40px 20px 40px 30px;
+    flex: 3;
 }
 
+main p {
+    font-family: 'Merriweather', Times, serif;
+    line-height: 1.4em;
+}
 
 h1,
 h2,
@@ -101,13 +104,13 @@ h5 {
 }
 
 h1 {
-    font-size: 3.2em;
+    font-size: 3.6em;
     font-weight: 400;
     margin-top: 0;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 
 h4 {
@@ -116,7 +119,6 @@ h4 {
 
 h5 {
     margin-bottom: 10px;
-    ;
 }
 
 
@@ -128,18 +130,18 @@ h5 {
 .portrait img {
     border-radius: 50%;
     width: 100%;
-    margin-bottom: 50px;
 }
 
-.github a {
+.social {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
+    margin-bottom: 40px;
 }
 
-.github img {
-    height: 20px;
+.social img {
+    height: 30px;
+    margin: 0 10px;
 }
 
 #skills {
