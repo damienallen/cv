@@ -11,6 +11,9 @@ bio:
     url: https://github.com/damienallen
     username: damienallen
 
+  linkedin:
+    url: https://www.linkedin.com/in/damien-allen-
+    username: Damien Allen
 
 education:
   - institution: University of Colorado at Boulder
@@ -25,31 +28,26 @@ work:
     title: Software Developer
     years: 2023 - Present
     description: >
-      Developing spatial analyses for precision agriculture, 
-      empowering fruit growers and breeders.
-      Building user-friendly interfaces and efficient deployment solutions.
+      Developing spatial analysis products for precision agriculture using both 
+      aerial imagery and observations from the edge. Building user-friendly tools 
+      for operational use on-premise and customer oriented applications in the cloud.
 
   - company: MX3D
     title: Lead Software Developer
     years: 2019 - 2022
     description: >
-      Was responsible for translating an R&D 3D metal printing process
-      into a usable, end-to-end software product. My role included 
-      systems architecture, establishing design principles,
-      building deployment pipelines, and hiring/mentoring new teammembers.
+      Translated an R&D 3D metal printing process into a marketable, 
+      end-to-end software product. Role included geometric analysis, 
+      toolpath-planning, systems architecture, and implementation of 
+      agile practices while establishing technical teams with CTO.
 
   - company: Mobile Water Management
     title: Software & Product Developer
     years: 2016 - 2019
     description: >
-      Developed a mobile app in close coordination with the 
-      Dutch water authorities for measuring surface and
-      groundwater levels.
-
-  - company: University of Colorado at Boulder
-    title: Computer Lab Systems Admin
-    years: 2009 - 2012
-    description: Cross-platform management and deployment of computer labs.
+      Designed and developed water management digitization tools used by Dutch 
+      water authorities. Enabled hundreds of thousands of measurements 
+      for operational decision making.
 
   - company: Stichting Voedseltuin
     title: Volunteer Gardener
@@ -62,25 +60,25 @@ skills:
       - Python
       - Django
       - FastAPI
-      - Docker & K8s
+      - Docker
       - CI / CD
       - Ansible
   - label: Frontend
     items:
-      - React
       - Typescript
       - UI / UX
+      - React
       - Three.js
       - Ionic
       - Qt
   - label: CAD & GIS
     items:
       - QGIS
-      - Rhino
-      - Grasshopper
-      - OpenSCAD
       - Shapely
       - GeoPandas
+      - OpenSCAD
+      - Rhino
+      - Grasshopper
 
 language:
   - name: English

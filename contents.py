@@ -4,7 +4,7 @@ import yaml
 from pydantic import BaseModel, AnyUrl
 
 
-class Github(BaseModel):
+class Social(BaseModel):
     username: str
     url: AnyUrl
 
@@ -19,7 +19,8 @@ class BioSection(BaseModel):
     location: str
     nationality: str
     contact: Contact
-    github: Github
+    github: Social
+    linkedin: Social
 
 
 class LanguageItem(BaseModel):
