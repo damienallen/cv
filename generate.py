@@ -1,4 +1,5 @@
 import typer
+from weasyprint import HTML
 from contents import load_cv
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -9,24 +10,30 @@ TEMPLATES_DIR = ROOT_DIR / "templates"
 CONTENTS_PATH = ROOT_DIR / "contents.yml"
 
 DIST_DIR = ROOT_DIR / "dist"
-OUTPUT_PATH = DIST_DIR / "cv.html"
+HTML_PATH = DIST_DIR / "cv.html"
+PDF_PATH = DIST_DIR / "damien_allen_cv.pdf"
+
+jinja_env = Environment(
+    loader=FileSystemLoader("templates"), autoescape=select_autoescape()
+)
 
 
 def main(
     contents_path: Path = CONTENTS_PATH,
-    output_path: Path = OUTPUT_PATH,
 ):
-    jinja_env = Environment(
-        loader=FileSystemLoader("templates"), autoescape=select_autoescape()
-    )
-
-    print("Loading CV template")
-    template = jinja_env.get_template("cv_template.html")
-
     contents = load_cv(contents_path)
-    print(f"Loading CV contents: {contents_path}")
+    print(f"Loading CV contents ({contents_path})")
 
-    print("Rendering HTML output")
+    if DIST_DIR.exists():
+        rmtree(DIST_DIR)
+    DIST_DIR.mkdir(exist_ok=True)
+
+    # Copy linked assets
+    copytree(TEMPLATES_DIR / "assets", DIST_DIR / "assets")
+
+    # Write HTML output
+    print(f"Rendering HTML: {HTML_PATH}")
+    template = jinja_env.get_template("cv_template.html")
     rendered_cv = template.render(
         bio=contents.bio,
         education=contents.education,
@@ -35,14 +42,13 @@ def main(
         skills=contents.skills,
     )
 
-    print(f"Saved to: {output_path}")
-    if DIST_DIR.exists():
-        rmtree(DIST_DIR)
-
-    DIST_DIR.mkdir(exist_ok=True)
-    copytree(TEMPLATES_DIR / "assets", DIST_DIR / "assets")
-    with open(output_path, "w") as f:
+    with open(HTML_PATH, "w+") as f:
         f.write(rendered_cv)
+
+    # Write rendered PDF
+    print(f"Rendering PDF: {PDF_PATH}")
+    with open(HTML_PATH) as f:
+        HTML(f).write_pdf(PDF_PATH)
 
 
 if __name__ == "__main__":
