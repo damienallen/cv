@@ -1,6 +1,6 @@
 # cv
 
-Over-engineered CV generator
+Bespoke CV generator
 
 ## Setup
 
