@@ -35,7 +35,6 @@ work:
     years: 2023 - 2024
     description: >
       Developed spatial analysis products for precision agriculture using both aerial imagery and observations from the edge.
-      Built user-friendly tools for operational use on-premise and customer oriented applications in the cloud.
 
   - company: MX3D
     title: Lead Software Developer
@@ -43,8 +42,7 @@ work:
     description: >
       Translated an R&D 3D metal printing process into a marketable, 
       end-to-end software product. Role included geometric analysis, 
-      toolpath-planning, systems architecture, and implementation of 
-      agile practices while establishing technical teams with CTO.
+      toolpath-planning, systems architecture, and establishing technical teams with CTO.
 
   - company: Mobile Water Management
     title: Software & Product Developer

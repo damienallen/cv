@@ -7,7 +7,7 @@ on:
 
 jobs:
   generate-cv:
-    name: python
+    name: generate-cv
     runs-on: ubuntu-latest
 
     steps:

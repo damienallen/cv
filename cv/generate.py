@@ -1,11 +1,13 @@
-import typer
-from weasyprint import HTML
-from contents import load_cv
 from pathlib import Path
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 from shutil import copytree, rmtree
 
-ROOT_DIR = Path(__file__).parent
+import typer
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+from weasyprint import HTML
+
+from cv.contents import load_cv
+
+ROOT_DIR = Path(__file__).parents[1]
 TEMPLATES_DIR = ROOT_DIR / "templates"
 CONTENTS_PATH = ROOT_DIR / "contents.yml"
 
