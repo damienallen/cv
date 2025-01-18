@@ -28,5 +28,5 @@ $ uv sync
 Adjust values in _contents.yml_ and generate outputs:
 
 ```bash
-$ python -m cv.generate
+$ uv run python -m cv.generate
 ```
