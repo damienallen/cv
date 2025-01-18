@@ -13,6 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install weasyprint
+        run: sudo apt install weasyprint
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 
@@ -23,3 +26,9 @@ jobs:
 
       - name: Install project dependencies
         run: uv sync
+
+      - name: Generate outputs
+        run: uv run python -m cv.generate
+
+      - name: Upload via SSH
+        run: ls ./dist
