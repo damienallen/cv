@@ -5,25 +5,21 @@ Bespoke CV generator
 ## Setup
 
 #### Requirements
-- Python 3.12
-- Poetry
+
+- uv (python 3.12)
 - weasyprint
 
 #### Python Environment
-
 
 ```bash
 $ sudo apt install weasyprint
 ```
 
 ```bash
-$ poetry shell
-$ poetry install
+$ uv sync
 ```
 
 ## CV generation
-
-
 
 ```bash
 $ python -m generate
