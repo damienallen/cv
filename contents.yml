@@ -24,13 +24,18 @@ education:
     years: 2012 - 2015
 
 work:
+  - company: RIPE NCC
+    title: Software Engineer
+    years: 2024 - Present
+    description: >
+      Working on analytical tools for internet operators and the wider web community.
+
   - company: Aurea Imaging
     title: Software Developer
-    years: 2023 - Present
+    years: 2023 - 2024
     description: >
-      Developing spatial analysis products for precision agriculture using both 
-      aerial imagery and observations from the edge. Building user-friendly tools 
-      for operational use on-premise and customer oriented applications in the cloud.
+      Developed spatial analysis products for precision agriculture using both aerial imagery and observations from the edge.
+      Built user-friendly tools for operational use on-premise and customer oriented applications in the cloud.
 
   - company: MX3D
     title: Lead Software Developer
@@ -58,26 +63,20 @@ skills:
   - label: Backend
     items:
       - Python
-      - Django
-      - FastAPI
+      - (no)SQL
       - Docker
       - CI / CD
-      - Ansible
   - label: Frontend
     items:
-      - Typescript
+      - Javascript
       - UI / UX
-      - React
       - Three.js
-      - Ionic
-      - Qt
-  - label: CAD & GIS
+      - React
+  - label: Design
     items:
-      - QGIS
-      - Shapely
-      - GeoPandas
+      - Photoshop
       - OpenSCAD
-      - Rhino
+      - Rhino 3D
       - Grasshopper
 
 language:
