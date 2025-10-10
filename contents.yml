@@ -3,9 +3,7 @@ bio:
   location: Rotterdam, NL
   nationality: NL / US
 
-  contact:
-    email: work@dallen.co
-    phone: +31 6 29090983
+  email: work@dallen.co
 
   github:
     url: https://github.com/damienallen
@@ -28,7 +26,7 @@ work:
     title: Software Engineer
     years: 2024 - Present
     description: >
-      Working on analytical tools for internet operators and the wider web community.
+      Working on analytical tools for network operators and the wider internet community.
 
   - company: Aurea Imaging
     title: Software Developer
@@ -52,10 +50,10 @@ work:
       water authorities. Enabled hundreds of thousands of measurements 
       for operational decision making.
 
-  - company: Stichting Voedseltuin
-    title: Volunteer Gardener
-    years: 2018 - Present
-    description: Growing fresh produce to supplement food bank packets.
+  - company: Groundwater Global Foundation
+    title: Graphic Design & UI Contributor
+    years: 2024 - Present
+    description: Community based groundwater measurements and monitoring.
 
 skills:
   - label: Backend

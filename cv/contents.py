@@ -9,16 +9,11 @@ class Social(BaseModel):
     url: AnyUrl
 
 
-class Contact(BaseModel):
-    email: str
-    phone: str
-
-
 class BioSection(BaseModel):
     name: str
     location: str
     nationality: str
-    contact: Contact
+    email: str
     github: Social
     linkedin: Social
 
