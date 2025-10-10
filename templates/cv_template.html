@@ -1,101 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
     <title>Damien Allen - CV</title>
 
-    <!-- CSP -->
-    <meta http-equiv="Content-Security-Policy"
-        content="script-src 'self' 'unsafe-inline' 'unsafe-eval' tele.dallen.dev">
-    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' fonts.googleapis.com">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline' 'unsafe-eval' tele.dallen.dev"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="style-src 'self' 'unsafe-inline' fonts.googleapis.com"
+    />
 
-    <!-- Fonts & icons -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300|pen+Sans:300,400,600" rel="stylesheet">
-    <link href="assets/cv.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:300|pen+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link href="assets/styles.css" rel="stylesheet" />
 
-    <script defer data-domain="dallen.co" src="https://tele.dallen.dev/js/script.js"></script>
+    <script
+      defer
+      data-domain="dallen.co"
+      src="https://tele.dallen.dev/js/script.js"
+    ></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div class="page">
-        <header>
-            <section id="bio">
-                <div class="portrait">
-                    <img src="assets/portrait.png" alt="Portrait photo" />
-                </div>
-                <p class="social">
-                    <a href="{{ bio.github.url }}">
-                        <img src="assets/github.svg" alt="Github profile: {{ bio.github.username }}" />
-                    </a>
-                    <a href="{{ bio.linkedin.url }}">
-                        <img src="assets/linkedin.svg" alt="LinkedIn profile: {{ bio.linkedin.username }}" />
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:{{ bio.email }}">
-                        {{ bio.email }}
-                    </a>
-                </p>
-                <br>
-                <p>{{ bio.location }}</p>
-                <p>Nationalities: {{ bio.nationality }}</p>
-            </section>
-            <section id="education">
-                <h2>Education</h2>
-                {% for item in education %}
-                <div class="section-items">
-                    <h5>{{ item.years}}</h5>
-                    <div>{{ item.institution}}</div>
-                    <div>{{ item.degree}}</div>
-                </div>
-                {% endfor %}
-            </section>
-            <section id="language">
-                <h2>Language</h2>
-                <div class="section-items">
-                    {% for item in language %}
-                    <div>{{ item.name}} ({{ item.level }})</div>
-                    {% endfor %}
-                </div>
-            </section>
-        </header>
+      <header>
+        <section id="bio">
+          <div class="portrait">
+            <img src="assets/portrait.png" alt="Portrait photo" />
+          </div>
+          <p class="social">
+            <a href="{{ bio.github.url }}">
+              <img
+                src="assets/github.svg"
+                alt="Github profile: {{ bio.github.username }}"
+              />
+            </a>
+            <a href="{{ bio.linkedin.url }}">
+              <img
+                src="assets/linkedin.svg"
+                alt="LinkedIn profile: {{ bio.linkedin.username }}"
+              />
+            </a>
+          </p>
+          <p>
+            <a href="mailto:{{ bio.email }}"> {{ bio.email }} </a>
+          </p>
+          <br />
+          <p>{{ bio.location }}</p>
+          <p>Nationalities: {{ bio.nationality }}</p>
+        </section>
+        <section id="education">
+          <h2>Education</h2>
+          {% for item in education %}
+          <div class="section-items">
+            <h5>{{ item.years}}</h5>
+            <div>{{ item.institution}}</div>
+            <div>{{ item.degree}}</div>
+          </div>
+          {% endfor %}
+        </section>
+        <section id="language">
+          <h2>Language</h2>
+          <div class="section-items">
+            {% for item in language %}
+            <div>{{ item.name}} ({{ item.level }})</div>
+            {% endfor %}
+          </div>
+        </section>
+      </header>
 
-        <main>
-            <section id="name">
-                <h1>{{ bio.name }}</h1>
-            </section>
-            <section id="work">
-                {% for item in work %}
-                <div class="section-items">
-                    <span>{{ item.company}}</span>
-                    <div>
-                        <h4>{{ item.title}}</h4>
-                        <h5>{{ item.years}}</h5>
-                    </div>
-                    <p>{{ item.description}}</p>
-                </div>
-                {% endfor %}
-            </section>
-            <section id="skills">
-                {% for category in skills %}
-                <div class="section-items">
-                    <h3>{{ category.label }}</h3>
-                    <ul>
-                        {% for skill in category.items %}
-                        <li>{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
-            </section>
-        </main>
-
+      <main>
+        <section id="name">
+          <h1>{{ bio.name }}</h1>
+        </section>
+        <section id="work">
+          {% for item in work %}
+          <div class="section-items">
+            <span>{{ item.company}}</span>
+            <div>
+              <h4>{{ item.title}}</h4>
+              <h5>{{ item.years}}</h5>
+            </div>
+            <p>{{ item.description}}</p>
+          </div>
+          {% endfor %}
+        </section>
+        <section id="skills">
+          {% for category in skills %}
+          <div class="section-items">
+            <h3>{{ category.label }}</h3>
+            <ul>
+              {% for skill in category.items %}
+              <li>{{ skill }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </section>
+      </main>
     </div>
-</body>
-
+  </body>
 </html>

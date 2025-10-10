@@ -150,8 +150,12 @@ h5 {
   flex: 1;
 }
 
-#skills div ul {
+#skills ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+#skills li {
+  margin-bottom: 4px;
 }
