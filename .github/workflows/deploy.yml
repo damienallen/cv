@@ -30,6 +30,11 @@ jobs:
       - name: Generate static assets
         run: uv run python -m cv.generate
 
+      - name: Debug action
+        run: |
+          pwd
+          ls
+
       - name: Login to Github Registry
         uses: docker/login-action@v3
         with:
