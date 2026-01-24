@@ -34,6 +34,7 @@ jobs:
         run: |
           pwd
           ls
+          ls dist/
 
       - name: Login to Github Registry
         uses: docker/login-action@v3
