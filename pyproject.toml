@@ -3,7 +3,7 @@ name = "cv"
 version = "2026.1"
 description = "Bespoke CV generator"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "3.12"
 dependencies = [
     "jinja2>=3.1.6",
     "pyyaml>=6.0.3",
