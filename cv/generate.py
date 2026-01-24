@@ -12,7 +12,7 @@ TEMPLATES_DIR = ROOT_DIR / "templates"
 CONTENTS_PATH = ROOT_DIR / "contents.yml"
 
 DIST_DIR = ROOT_DIR / "dist"
-HTML_PATH = DIST_DIR / "cv.html"
+HTML_PATH = DIST_DIR / "index.html"
 PDF_PATH = DIST_DIR / "damien_allen_cv.pdf"
 
 jinja_env = Environment(

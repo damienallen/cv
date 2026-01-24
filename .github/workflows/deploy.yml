@@ -13,29 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install weasyprint
-        run: sudo apt install weasyprint
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: "pyproject.toml"
-
-      - name: Install project dependencies
-        run: uv sync
-
-      - name: Generate static assets
-        run: uv run python -m cv.generate
-
-      - name: Debug action
-        run: |
-          pwd
-          ls
-          ls dist/
-
       - name: Login to Github Registry
         uses: docker/login-action@v3
         with:
@@ -50,6 +27,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
+          target: server
           tags: ghcr.io/damienallen/cv:latest
           cache-from: type=registry,ref=ghcr.io/damienallen/cv:latest
           cache-to: type=inline
