@@ -1,15 +1,14 @@
-name: deploy
+name: release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*"
 
 jobs:
-  update-cv:
-    name: update-cv
-    runs-on: ubuntu-latest
-
+  build:
+    name: build
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +26,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          target: server
-          tags: ghcr.io/damienallen/cv:latest
-          cache-from: type=registry,ref=ghcr.io/damienallen/cv:latest
-          cache-to: type=inline
+          tags: ghcr.io/damienallen/cv:${{ github.ref_name }}
+          cache-from: type=gha
+          cache-to: type=gha
