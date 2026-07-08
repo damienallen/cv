@@ -48,9 +48,8 @@ work:
     title: Software & Product Developer
     years: 2016 - 2019
     description: >
-      Designed and developed water management digitization tools used by Dutch 
-      water authorities. Enabled hundreds of thousands of measurements 
-      for operational decision making.
+      Developed digitization tools for Dutch water authorities 
+      enabling 100k+ measurements for operational decision making.
 
   - company: Groundwater Global Foundation
     title: Graphic Design & UI Contributor
@@ -61,21 +60,23 @@ skills:
   - label: Backend
     items:
       - Python
-      - (no)SQL
-      - Containerization
-      - CI / CD
+      - Django & FastAPI
+      - Containers (w/k8s)
   - label: Frontend
     items:
       - Typescript
-      - 2D/3D visualization
-      - Vector graphics
-      - UI / UX
+      - Three.js
+      - UI Design
+  - label: Analysis
+    items:
+      - Geospatial
+      - Applied math
+      - GIS & Cartography
   - label: Design
     items:
-      - Photoshop
-      - OpenSCAD
-      - Rhino 3D
-      - Grasshopper
+      - Vector graphics
+      - Image editing
+      - (Parametric) 3D
 
 language:
   - name: English
