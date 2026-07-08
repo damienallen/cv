@@ -1,6 +1,6 @@
 [project]
 name = "cv"
-version = "2026.2"
+version = "2026.4"
 description = "Bespoke CV generator"
 readme = "README.md"
 requires-python = "==3.12.*"
